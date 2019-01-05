@@ -1,9 +1,23 @@
 #pragma once
 
 
-enum Axles
+enum AxlesRace
 {
-	Steering = 0
+	Steering = 0,
+	Throttle = 1,
+	Brake = 2,
+	Handbrake = 3,
+	Reverse = 4,
+	LookAround = 5,
+	RaceAxle6 = 6
+};
+
+enum AxlesMenu
+{
+	LookLeft = 2,
+	LookDown = 3,
+	LookUp = 4,
+	LookRight = 5
 };
 
 enum MenuButtons
