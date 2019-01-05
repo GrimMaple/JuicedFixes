@@ -184,7 +184,7 @@ public:
         data.load_file(m_szFileName);
     }
 
-    int ReadInteger(char* szSection, char* szKey, int iDefaultValue)
+    int ReadInteger(const char* szSection, const char* szKey, int iDefaultValue)
     {
         try {
             auto str = data.get(szSection, szKey, std::to_string(iDefaultValue));
