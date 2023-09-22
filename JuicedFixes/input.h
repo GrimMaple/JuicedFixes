@@ -24,7 +24,7 @@ enum AxlesRace
 	Handbrake = 3,
 	Reverse = 4,
 	LookAround = 5,
-	RaceAxle6 = 6
+	LookAroundY = 6
 };
 
 enum AxlesMenu

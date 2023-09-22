@@ -1,3 +1,6 @@
 [submodule "3rdparty/injector"]
 	path = 3rdparty/injector
 	url = https://github.com/GrimMaple/injector
+[submodule "3rdparty/IniReader"]
+	path = 3rdparty/IniReader
+	url = https://github.com/ThirteenAG/IniReader
