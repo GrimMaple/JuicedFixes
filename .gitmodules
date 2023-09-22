@@ -1,0 +1,3 @@
+[submodule "3rdparty/injector"]
+	path = 3rdparty/injector
+	url = https://github.com/GrimMaple/injector
