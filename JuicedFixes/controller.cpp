@@ -114,7 +114,7 @@ float Controllers::getValue(int controllerId, ControllerButtons btn) const
     if (!controllers[controllerId].connected)
         return 0;
 
-    controllers[controllerId].buttons[btn] = (controllers[controllerId].state.Gamepad.wButtons & JoyBtnToXInputBtn(btn)) != 0;
+    controllers[controllerId].setButton(btn, (controllers[controllerId].state.Gamepad.wButtons & JoyBtnToXInputBtn(btn)) != 0);
 
     if (btn >= ControllerButtons::LeftTrigger)
     {
@@ -126,4 +126,11 @@ float Controllers::getValue(int controllerId, ControllerButtons btn) const
 bool Controllers::getPressed(int controllerId, ControllerButtons btn) const
 {
     return getValue(controllerId, btn) > 0.5f;
+}
+
+bool Controllers::getSinglePress(int controllerId, ControllerButtons btn) const
+{
+    bool ret = getPressed(controllerId, btn);
+    controllers[controllerId].buttons[btn] = false;
+    return ret;
 }

@@ -46,6 +46,7 @@ public:
 
     float getValue(int controllerId, ControllerButtons btn) const;
     bool getPressed(int controllerId, ControllerButtons btn) const;
+    bool getSinglePress(int controllerId, ControllerButtons btn) const;
 
 private:
     void RefreshControllers();
@@ -56,6 +57,20 @@ private:
         std::array<float, 6> axles;
         XINPUT_STATE state;
 
+        void setButton(ControllerButtons btn, bool state)
+        {
+            if (buttonsCache[btn] != state)
+            {
+                buttons[btn] = state;
+            }
+            buttonsCache[btn] = state;
+        }
+
+    private:
+        /// <summary>
+        /// Cached buttons for "singlePress" mechanism
+        /// </summary>
+        std::array<bool, 14> buttonsCache;
     };
 
     int timeout = 0;
