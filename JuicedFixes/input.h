@@ -64,7 +64,7 @@ enum MenuButtons
 	//GearUp = 7,
 };
 
-enum RaceButtons
+enum class RaceButtons : int
 {
 	Race0 = 0,
 	Pause = 1,
@@ -81,10 +81,12 @@ enum RaceButtons
 	Race12 = 12,
 	Race13 = 13,
 	Race14 = 14,
-	Race15 = 15
+	Race15 = 15,
+	Handbrake = 16,
+	Reverse = 17
 };
 
-enum ControlType
+enum ControlType : int
 {
 	Menu = 1,
 	Race = 0

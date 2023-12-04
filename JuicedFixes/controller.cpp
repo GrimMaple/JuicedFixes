@@ -111,7 +111,7 @@ void Controllers::Tick(int passed)
 
 float Controllers::getValue(int controllerId, ControllerButtons btn) const
 {
-    if (!controllers[controllerId].connected)
+    if (!controllers[controllerId].connected || btn >= ControllerButtons::End)
         return 0;
 
     controllers[controllerId].setButton(btn, (controllers[controllerId].state.Gamepad.wButtons & JoyBtnToXInputBtn(btn)) != 0);
