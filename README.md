@@ -18,7 +18,7 @@ There is no *yet* a GUI for configuring the controls, but it is planned. To conf
 ## Known issues
 There are those known issues:
   * Unable to change AI companion aggression
-  * Looking left in the race crashes the game
+  * Pausing the game may lead to unforceen consequences
   * Trying to bring controller settings in-game will not change the bindings  
     
 Other issues might be present as well. If you happen to find one - please fire an issue on this github page.
