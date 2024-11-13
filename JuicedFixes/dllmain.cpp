@@ -168,9 +168,8 @@ __declspec(noinline) int ProcessRaceInput(int key)
 	case RaceButtons::Nitro:
 		return std::bit_cast<int>(controllers.getValue(0, static_cast<ControllerButtons>(RaceCodes[key])));
 	case RaceButtons::ChangeView:
-		return controllers.getSinglePress(0, button);
-	case RaceButtons::GearDown:
 	case RaceButtons::GearUp:
+	case RaceButtons::GearDown:
 		return controllers.getSinglePress(0, button);
 	default:
 		return controllers.getPressed(0, static_cast<ControllerButtons>(RaceCodes[key]));
